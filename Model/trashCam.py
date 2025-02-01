@@ -1,14 +1,17 @@
+# OLD SCRIPT
+
 from ultralytics import YOLO
 import cv2, cvzone
 import math, os, csv, geocoder, folium 
 import numpy as np
 from datetime import datetime
 
-cap = cv2.VideoCapture("Workspace/Test/videos/garbage7.mp4")
+# cap = cv2.VideoCapture("Workspace/Test/videos/garbage7.mp4")
 # cap = cv2.VideoCapture(0)
 # cap = cv2.VideoCapture("http://192.168.76.132:4747/video")
+cap = cv2.VideoCapture("http://192.168.137.18:8000")
 
-model = YOLO("Workspace/Trained Models/bests.pt")
+model = YOLO(r"D:/TrashCam/Workspace/Trained Models/bests.pt")
 # model = YOLO(os.path.join(os.getcwd(), 'best.pt')) # ANOTHER METHOD
 model.to('cpu')
 
